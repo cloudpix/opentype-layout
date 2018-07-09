@@ -11,7 +11,7 @@ Experimental word-wrapping and layout for [Opentype.js](https://github.com/nodeb
 Best used with npm and browserify. This should also work in Node.js and other environments.
 
 ```sh
-npm install opentype-layout --save
+npm install opentype-layout-improved --save
 ```
 
 ## Demo
@@ -28,7 +28,7 @@ See the [demo](./demo) folder for a complete example.
 
 ```js
 var opentype = require('opentype.js');
-var computeLayout = require('opentype-layout');
+var computeLayout = require('opentype-layout-improved');
 
 opentype.load('Font.ttf', function (err, font) {
   if (err) throw err;
