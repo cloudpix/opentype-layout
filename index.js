@@ -13,11 +13,15 @@ module.exports = function (font, text, opt) {
 	var letterSpacing = defined(opt.letterSpacing, 0);
 	var width = defined(opt.width, Infinity);
 
+	var breakWord = defined(opt.breakWord, false);
+
 	// apply word wrapping to text
 	var wrapOpts = assign({}, opt, {
 		measure: measure
 	});
 	var lines = wordWrapper.lines(text, wrapOpts);
+
+	console.log("LINES", lines);
 
 	// get max line width from all lines
 	var maxLineWidth = lines.reduce(function (prev, line) {

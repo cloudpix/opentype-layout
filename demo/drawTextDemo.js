@@ -14,7 +14,8 @@ module.exports = function (ctx, font, text, styles) {
     letterSpacing: convert.getEmUnits(font, fontSizePx, styles.letterSpacing),
     lineHeight: convert.getEmUnits(font, fontSizePx, styles.lineHeight),
     width: convert.getEmUnits(font, fontSizePx, styles.width),
-    align: styles.textAlign
+    align: styles.textAlign,
+    mode: "pre"
   });
 
   // Our <div> is offset 20px by left/top, let's match that.
