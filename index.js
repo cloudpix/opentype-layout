@@ -1,5 +1,5 @@
 var defined = require('defined');
-var wordWrapper = require('word-wrapper');
+var wordWrapper = require('word-wrapper-improved');
 var assign = require('object-assign');
 
 // A default 'line-height' according to Chrome/FF/Safari (Jun 2016)

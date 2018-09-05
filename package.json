@@ -1,6 +1,6 @@
 {
   "name": "opentype-layout-improved",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "word wraps and lays out Opentype.js glyphs. A fork from https://github.com/Jam3/opentype-layout",
   "main": "index.js",
   "license": "MIT",
