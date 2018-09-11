@@ -21,8 +21,6 @@ module.exports = function (font, text, opt) {
 	});
 	var lines = wordWrapper.lines(text, wrapOpts);
 
-	console.log("LINES", lines);
-
 	// get max line width from all lines
 	var maxLineWidth = lines.reduce(function (prev, line) {
 		return Math.max(prev, line.width);
