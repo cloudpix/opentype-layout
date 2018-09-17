@@ -1,6 +1,6 @@
 {
   "name": "opentype-layout-improved",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "word wraps and lays out Opentype.js glyphs. A fork from https://github.com/Jam3/opentype-layout",
   "main": "index.js",
   "license": "MIT",
@@ -12,7 +12,7 @@
   "dependencies": {
     "object-assign": "^4.1.0",
     "defined": "^1.0.0",
-    "word-wrapper-improved": "^1.0.8"
+    "word-wrapper-improved": "^1.0.9"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.9.0",
