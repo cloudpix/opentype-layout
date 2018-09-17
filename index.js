@@ -20,6 +20,9 @@ module.exports = function (font, text, opt) {
 		measure: measure
 	});
 	var lines = wordWrapper.lines(text, wrapOpts);
+	// console.log('line text', lines.map(line => {
+		// return text.substring(line.start, line.end);
+	// }));
 
 	// get max line width from all lines
 	var maxLineWidth = lines.reduce(function (prev, line) {
@@ -52,7 +55,6 @@ module.exports = function (font, text, opt) {
 		var start = line.start;
 		var end = (lineIndex === lines.length - 1) ? line.end - 1 : line.end;
 		var lineWidth = line.width;
-
 		// Layout by glyph
 		for (var j = start, c = 0; j <= end; j++, c++) {
 			var char = text.charAt(j);
@@ -79,6 +81,7 @@ module.exports = function (font, text, opt) {
 
 			// Store glyph data
 			glyphs.push({
+				char: char,
 				position: [x + tx, y],
 				data: glyph,
 				index: j,
