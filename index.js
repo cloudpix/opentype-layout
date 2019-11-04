@@ -21,7 +21,7 @@ module.exports = function (font, text, opt) {
 	});
 	var lines = wordWrapper.lines(text, wrapOpts);
 	// console.log('line text', lines.map(line => {
-		// return text.substring(line.start, line.end);
+	// return text.substring(line.start, line.end);
 	// }));
 
 	// get max line width from all lines
@@ -176,8 +176,9 @@ function computeMetrics(font, text, start, end, width, letterSpacing) {
 }
 
 function getGlyph(font, char) {
-	var isTab = char === '\t';
-	return font.charToGlyph(isTab ? ' ' : char);
+	// var isTab = char === '\t';
+	var isSpace = ['\t', '\n'].indexOf(char) >= 0;
+	return font.charToGlyph(isSpace ? ' ' : char);
 }
 
 function getAdvance(glyph, char) {
